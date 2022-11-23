@@ -1,0 +1,68 @@
+<html?>
+    <head>
+        <title>
+                Set Interval
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            p {
+                text-align: center;
+                color: white;
+            }
+            button {
+                display: inline-block;
+                background: orange;
+                color: white;
+                font-size: 16px;
+                font-weight: normal;
+                width: 132px;
+                text-align: center;
+                border-radius: 3px;
+                transition: 400ms;
+                text-decoration: none;
+                padding: 10px 22px;
+                z-index: 100000;
+                outline: none;
+                border: none;
+                box-shadow: 0px 10px 8px -8px rgba(0,0,0,0.6);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-div">
+            <div>
+                <p> Can you stop me when I reach 5</p>
+                <p class="showing"> </p>
+                <br>
+                <button id="btn"> Start </button>
+                <button id="btn1"> Stop </button>
+            </div>
+        </div>
+        <script>
+            const stopNum = document.querySelector('p');
+            const btn = document.querySelector('#btn');
+            const showing = document.querySelector('.showing');
+            const btnstop = document.querySelector('#btn1');
+            let num=0;
+            let timeRef;
+            const showMyNum = () =>{
+                showing.innerHTML="Loading...";
+                timeRef = setInterval(()=>{
+                    showing.innerHTML=`${num}`;
+                    num++;
+                },1000);
+            }
+
+            btn.addEventListener('click',showMyNum);
+            btnstop.addEventListener('click', () => {
+                clearInterval(timeRef);
+            });
+        </script>
+    </body>
+</html>

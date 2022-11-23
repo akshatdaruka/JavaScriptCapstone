@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            #click{
+                background: rgb(0, 140, 255);
+                cursor: pointer;
+                border : 4px solid black;
+                
+            }
+            .para{
+            border:4px solid black;
+            margin: 3px 0;
+            background: rgb(0, 217, 255);
+            padding: 9px;
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id ="firstContainer" class="container">
+            <button id="click" onclick="clicked()">
+                <h6><b>Click Here</b></h6>
+            </button>
+        </div>
+        <div class ="para" >
+                <h4>Click to find the Best Rock Band of all time!!!</h4>
+        </div>
+    </body>
+    <script>
+        function clicked(){
+            let query1 = document.querySelector('.para');
+            query1.innerHTML='<h2>Pink Floyd is the best Rock band of all time !!!</h2>';
+            query1.style.background = 'rgb(255, 4, 180)';
+        }
+    </script>
+</html>

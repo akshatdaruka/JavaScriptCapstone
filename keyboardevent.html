@@ -1,0 +1,63 @@
+<html?>
+    <head>
+        <title>
+            Keyboard Event
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            button {
+                display: inline-block;
+                background: yellow;
+                color: white;
+                font-size: 16px;
+                font-weight: normal;
+                width: 132px;
+                text-align: center;
+                border-radius: 3px;
+                transition: 400ms;
+                text-decoration: none;
+                padding: 10px 22px;
+                z-index: 100000;
+                outline: none;
+                border: none;
+            }
+            p {
+                text-align: center;
+                color: white;
+            }
+            h1 {
+                color: aquamarine;
+            }
+            .box{
+                width: 320px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "main-div">
+            <div>
+                <p>A function is triggered when the user is pressing a key in input field</p>
+                <br>
+                <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+                </br>
+                <p id ="keys"></p>
+            </div>
+        </div>
+        <div class = "box">
+            This is a box
+        </div>
+        <script>
+            const keyPress = () => {
+                document.getElementById('keys').innerHTML=`you pressed ${event.key} and its code is ${event.code}`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html?>
+    <head>
+        <title>
+            Mouse Events 
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            button {
+                display: inline-block;
+                background: yellow;
+                color: white;
+                font-size: 16px;
+                font-weight: normal;
+                width: 132px;
+                text-align: center;
+                border-radius: 3px;
+                transition: 400ms;
+                text-decoration: none;
+                padding: 10px 22px;
+                z-index: 100000;
+                outline: none;
+                border: none;
+            }
+            p {
+                text-align: center;
+                color: white;
+            }
+            h1 {
+                color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+            <b>
+            Click the text! The mouseDown function is triggered when the mouse button 
+            is pressed down over this paragraph, and sets the colour of text to red.
+            The mouseUp function is triggered when the mouse button is released, and sets
+            the colour of the text to green.
+            </b>
+        </p>
+        <script>
+            function mouseDown() {
+                document.getElementById('myP').style.color='blue';
+            }
+            function mouseUp() {
+                document.getElementById('myP').style.color='red';
+            }
+        </script>
+    </body>
+</html>

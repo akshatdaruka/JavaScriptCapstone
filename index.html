@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+        {
+            font-family: 'Inconsolata', sans-serif ;
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+        button {
+                display: inline-block;
+                background: yellow;
+                color: black;
+                font-size: 16px;
+                font-weight: normal;
+                width: 132px;
+                text-align: center;
+                border-radius: 3px;
+                transition: 400ms;
+                text-decoration: none;
+                padding: 10px 22px;
+                z-index: 100000;
+                outline: none;
+                border: none;
+            }
+        *{
+            margin:0;
+            padding:0;
+        }
+        p {
+                text-align: center;
+                color: white;
+            }
+        .container{
+            border:2px solid orange;
+            margin: 3px 0;
+            padding: 9px;
+        }
+        /* .bg-primary{
+            background-color: darkmagenta;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Learning JavaScript</h1>
+    <div id ="firstContainer" class="container">
+        <button id="click" onclick="clicked()">
+            Click Me 
+        </button>
+    </div>
+    <div class="container">
+        <p>This ia a paragraph</p>
+    </div>
+    <button onclick="goBack()">
+            Go Back 
+    </button>
+    <script src="index.js"></script>
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+    </script>
+    <!--We can write the java script inside this script tag also. Or we can write it in another
+    file and write the name and path(if in another folder) of the file in src.-->  
+</body>
+</html>

@@ -1,0 +1,23 @@
+JAVASCRIPT:
+- Client Side scripting.
+- Used for backend and frontend both.
+- Don't depend on Servers.
+
+WEB TECHNOLOGY:
+HTML- Mandatory, Basic structure of a web page (skeleton of web page)
+CSS- Designing
+JS- Client side scripting.
+
+When we write any site on browser, a request is generated which is sent to
+the server and then after verifying the request, server send a HTML code with
+CSS and JS embedded in it. The browser read and interpret that HTML file and
+what we see is a web page with design and functionalities.
+
+JAVASCRIPT:
+High level dynamic interpreted language that allows client side scripting
+to create completely dynamic web applications and websites.
+- Initially designed to make web pages 'alive'.
+- Script can be executed in bowser itself.
+- It can be executed in browser as well as the server.
+- Safe language when used in browser.
+- There are languages those gets 'transpilled' to JAVASCRIPT.

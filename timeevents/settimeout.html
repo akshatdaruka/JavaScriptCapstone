@@ -1,0 +1,60 @@
+<html?>
+    <head>
+        <title>
+                Timing based event
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            p {
+                text-align: center;
+                color: white;
+            }
+            button {
+                display: inline-block;
+                background: orange;
+                color: white;
+                font-size: 16px;
+                font-weight: normal;
+                width: 132px;
+                text-align: center;
+                border-radius: 3px;
+                transition: 400ms;
+                text-decoration: none;
+                padding: 10px 22px;
+                z-index: 100000;
+                outline: none;
+                border: none;
+                box-shadow: 0px 10px 8px -8px rgba(0,0,0,0.6);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-div">
+            <div>
+                <p>Want to know my name</p>
+                <p id="showMyName"></p>
+                <br>
+                <button id="btn"> Click Here </button>
+            </div>
+        </div>
+        <script>
+            const myName = document.querySelector('#showMyName');
+            const btn = document.querySelector('#btn');
+
+            const showMyName = () =>{
+                myName.innerHTML="Loading..."
+                setTimeout(()=>{
+                    myName.innerHTML="Akshat Daruka"
+                },1000)
+            }
+
+            btn.addEventListener('click',showMyName);
+        </script>
+    </body>
+</html>

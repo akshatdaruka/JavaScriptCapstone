@@ -1,0 +1,49 @@
+<html?>
+    <head>
+        <title>
+            Keyboard Event
+        </title>
+        <style>
+            body {
+                font-family: 'Inconsolata', sans-serif ;
+                background: #2a364f;
+                display: grid;
+                place-items: center;
+            }
+            #result{
+                color: turquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "main-div">
+            <div>
+                <label for="">Your Name </label>
+                <input type="text" name="" id="ice">
+                <br>
+                <label > Choose an ice-cream falvour
+                    <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                        <option value="none">Select One...</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="sardine">Sardine</option>
+                        <option value="vanilla">Vanilla</option>
+                    </select>
+                </label>
+                </br>
+                <div id="result"></div>
+            </div>
+        </div>
+        <script>
+            const selectElement = () =>{
+                const inputChange = document.getElementById('ice').value;
+                const iceCreams = document.getElementById('iceCreams').value;
+                console.log(`${inputChange} and ${iceCreams}`);
+                const result = document.getElementById('result');
+                result.innerHTML= `${inputChange} selects ${iceCreams} ice-cream flavour.` 
+                //WE CAN DO THIS WITHOUT USING ONCHANGE EVENT ALSO
+                //BY EVENT LISTENER 
+                //WE HAVE TO PASS 'CHANGE' AS FIRST PARAMETER.
+            }
+        </script>
+    </body>
+</html>
